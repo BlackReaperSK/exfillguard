@@ -1,0 +1,63 @@
+
+<html>
+
+<head>
+  <title>ExfillGuard / upload files from command line</title>
+
+	<link rel="stylesheet" href="assets/style.css">
+	<script src="/script.js?7"></script>
+
+	  	<link rel="icon" href="/logo.png">
+  	<meta name="description" content="Upload files from command line to cloud and then download to desktop or server">
+  	<meta name="keywords" content="Upload from command line, upload using bash, upload file to server, download file from server">
+  	<meta name="author" content="BlackReaperSK">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div id="content">
+		<header>
+							<h1>ExfillGuard</h1>
+				<p>
+				  Upload files from command line to easily share between servers, desktops and mobiles, 20GB max.
+				  Files are stored for 24 hours and can be downloaded only once.
+				</p>
+					</header>
+
+		<div id="focus">
+  <div id="upload-instructions"
+       onclick="copy_code_to_clipboard();"
+       onmouseover="document.querySelector('#browser-header').innerText='Click to copy'"
+       onmouseout="document.querySelector('#browser-header').innerText=''">
+    
+    <div id="browser-header"></div>
+    
+  	<code>curl exfillguard.cloud -T your_file</code>
+  </div>
+  
+  <p class="note" align="center">
+  	<span class="aslo">alternatively</span>
+  	<a id=choosefile href="javascript:document.getElementById('inputfile').click();">choose file(s)</a>
+  	<span class="aslo">to upload</span>
+
+  	  </p>
+  
+  <form method="post" onsubmit="return false;">
+  	<input type="file" style="display:none;" multiple id="inputfile" onchange="upload();" />
+  </form>
+  
+  <input type="text" id="copy"/>
+</div>
+
+
+<ul id="uploaded"></ul>
+<div id="dropzone"></div>
+
+
+<script>init_uploads();</script>	</div>
+
+
+	<script>fetch('https://measury.io/jU3dp0/bashupload_views');</script>
+</body>
+</html>
